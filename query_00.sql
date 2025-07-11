@@ -11,14 +11,14 @@ CREATE TABLE IF NOT EXISTS Customers(
 
 
 -- INSERT DATA
-INSERT INTO Customers
-("name", "country", "score")
+INSERT INTO
+    Customers("name", "country", "score")
 VALUES
-('Maria', 'Germany', 350),
-('George', 'UK', 750),
-('Martin', 'Germany', 500),
-('John', 'USA', 900),
-('Peter', 'USA', 0);
+    ('Maria', 'Germany', 350),
+    ('George', 'UK', 750),
+    ('Martin', 'Germany', 500),
+    ('John', 'USA', 900),
+    ('Peter', 'USA', 0);
 
 
 -- LOOK UP INSIDE THE TABLE
