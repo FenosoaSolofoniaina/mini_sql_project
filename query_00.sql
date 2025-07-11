@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS Customers(
     "score" FLOAT
 );
 
+
 -- INSERT DATA
 INSERT INTO Customers
 ("name", "country", "score")
@@ -18,6 +19,7 @@ VALUES
 ('Martin', 'Germany', 500),
 ('John', 'USA', 900),
 ('Peter', 'USA', 0);
+
 
 -- LOOK UP INSIDE THE TABLE
 SELECT *

@@ -10,9 +10,9 @@ CREATE TABLE Persons(
     CONSTRAINT pk_persons PRIMARY KEY ("id")
 );
 
-
 SELECT * 
 FROM Persons;
+
 
 --  ADD A NEW COLUMN
 ALTER TABLE Persons
@@ -21,12 +21,14 @@ ADD COLUMN "email" VARCHAR(50) NOT NULL;
 SELECT * 
 FROM Persons;
 
+
 -- THEN DELETE THE COLUMN WE HAVE BEEN CREATED BEFORE
 ALTER TABLE Persons
 DROP COLUMN "email";
 
 SELECT * 
 FROM Persons;
+
 
 -- DELETE THE TABLE
 DROP TABLE Persons;
