@@ -3,7 +3,7 @@
 Learn SQL from youtube channel
 [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus)
 
-Use PostgreSQL Database for thi project with the help of the platform (sqlite online)[https://sqliteonline.com]
+Use PostgreSQL Database for thi project with the help of the platform [sqlite online](https://sqliteonline.com)
 Thanks.
 
 ## Example of code
