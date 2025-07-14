@@ -3,9 +3,12 @@
 Learn SQL from youtube channel
 [SQL Full Course for Beginners (30 Hours) – From Zero to Hero](https://www.youtube.com/watch?v=SSKVgrwhzus)
 
-## Exampke of code
+Use PostgreSQL Database for thi project with the help of the platform (sqlite online)[https://sqliteonline.com]
+Thanks.
 
+## Example of code
 ``` SQL
+
 CREATE TABLE IF NOT EXISTS Customers(
     "id" SERIAL PRIMARY KEY,
     "first_name" VARCHAR(50),
@@ -27,3 +30,5 @@ VALUES
 SELECt *
 FROM Customers;
 ```
+
+Enjoye !
