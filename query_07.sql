@@ -21,17 +21,13 @@ VALUES
     ('Peter', 'USA', 0);
 
 
--- LOOK UP INSIDE THE TABLE
-SELECT *
-FROM Customers
-ORDER BY "score" DESC;
-
-
--- WINDOW FUNCTION WITH SUM()
-SELECT
+-- WINDOW FUNCTION : INTEGER RANKING
+SELECT 
 	"id",
-    "name",
     "country",
     "score",
-    SUM("score") OVER (PARTITION BY "country" ORDER BY "name") score_per_country
+    COALESCE("score", 0) zero,
+    ROW_NUMBER() OVER (ORDER BY COALESCE("score", 0) ASC) row_number_score,
+    RANK() OVER (ORDER BY COALESCE("score", 0) ASC) rank_score,
+    DENSE_RANK() OVER (ORDER BY COALESCE("score", 0) ASC) dense_rank_score
 FROM Customers;
