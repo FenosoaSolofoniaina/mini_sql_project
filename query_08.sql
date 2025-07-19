@@ -27,11 +27,13 @@ VALUES
 
 -- WINDOW FUNCTION : INTEGER RANKING
 SELECT 
-	"id",
-    "country",
-    "score",
-    COALESCE("score", 0) zero,
-    ROW_NUMBER() OVER (ORDER BY COALESCE("score", 0) ASC) row_number_score,
-    RANK() OVER (ORDER BY COALESCE("score", 0) ASC) rank_score,
-    DENSE_RANK() OVER (ORDER BY COALESCE("score", 0) ASC) dense_rank_score
-FROM Customers;
+	*,
+    "current_score" - "previous_score" AS "diff_score"
+FROM (
+  SELECT 
+      "country",
+      SUM("score") AS "current_score",
+      LAG(SUM("score")) OVER(ORDER BY "country") AS "previous_score"
+  FROM Customers
+  GROUP BY "country"
+)t;
