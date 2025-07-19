@@ -27,11 +27,12 @@ FROM Customers
 ORDER BY "score" DESC;
 
 
--- WINDOW FUNCTION WITH SUM()
+-- WINDOW FUNCTION WITH SUM(), AVG()
 SELECT
 	"id",
     "name",
     "country",
     "score",
-    SUM("score") OVER (PARTITION BY "country" ORDER BY "name") score_per_country
+    SUM("score") OVER (PARTITION BY "country" ORDER BY "name") total_score_per_country,
+    AVG("score") OVER (PARTITION BY "country" ORDER BY "name") average_score_per_country
 FROM Customers;
