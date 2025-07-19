@@ -1,5 +1,5 @@
 /*
- * Joining rows of multiple tables with UNION, UNION ALL, INTERSECT
+ * Joining rows of multiple tables with UNION, UNION ALL, INTERSECT, EXCEPT
 */
 
 -- REMOVE TABLE
