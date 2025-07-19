@@ -1,3 +1,8 @@
+/*
+ * CREATING TABLE WITH COLUMNS AND DATATYPES
+*/
+
+
 -- REMOVE TABLE
 DROP TABLE IF EXISTS Customers ;
 
@@ -9,19 +14,5 @@ CREATE TABLE IF NOT EXISTS Customers(
     "score" FLOAT
 );
 
-
--- INSERT DATA
-INSERT INTO
-    Customers("name", "country", "score")
-VALUES
-    ('Maria', 'Germany', 350),
-    ('George', 'UK', 750),
-    ('Martin', 'Germany', 500),
-    ('John', 'USA', 900),
-    ('Peter', 'USA', 0);
-
-
--- LOOK UP INSIDE THE TABLE
 SELECT *
-FROM Customers
-ORDER BY "score" DESC;
+FROM Customers;

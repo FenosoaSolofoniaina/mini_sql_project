@@ -1,3 +1,8 @@
+/*
+ * Handle NULL values
+ * Make condition with CASE WHEN
+*/
+
 SELECT
     "id",
     "level_of_score",
