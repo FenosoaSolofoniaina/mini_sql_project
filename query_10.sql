@@ -33,3 +33,12 @@ WITH cte_1 AS (
   FROM Customers
   GROUP BY "country"
 )
+
+
+-- Recursive CTE
+WITH Series AS (
+    -- Anchor query
+    SELECT 1 count_number
+)
+
+SELECt * FROM Series;
