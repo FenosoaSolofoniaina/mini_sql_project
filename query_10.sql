@@ -25,11 +25,11 @@ VALUES
     ('Peter', 'USA', 0);
 
 
--- CTA
+-- First CTE
 WITH cte_1 AS (
-    SELECT 
-        "country",
-        SUM("score") "total_score_per_country",
-    FROM Customers
-    GROUP BY "country"
+  SELECT 
+  	"country",
+  	SUM("score") "total_score"
+  FROM Customers
+  GROUP BY "country"
 )
