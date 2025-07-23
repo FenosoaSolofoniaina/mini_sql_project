@@ -25,15 +25,11 @@ VALUES
     ('Peter', 'USA', 0);
 
 
--- WINDOW FUNCTION : INTEGER RANKING
-SELECT 
-	*,
-    "current_score" - "previous_score" AS "diff_score"
-FROM (
-  SELECT 
-      "country",
-      SUM("score") AS "current_score",
-      LAG(SUM("score")) OVER(ORDER BY "country") AS "previous_score"
-  FROM Customers
-  GROUP BY "country"
-)t;
+-- CTA
+WITH cte_1 AS (
+    SELECT 
+        "country",
+        SUM("score") "total_score_per_country",
+    FROM Customers
+    GROUP BY "country"
+)
